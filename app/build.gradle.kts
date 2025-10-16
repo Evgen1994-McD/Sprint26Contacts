@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.sprint26contacts"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.sprint26contacts"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
