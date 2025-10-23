@@ -20,6 +20,8 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -76,7 +78,7 @@ fun ContactDetails(contact: Contact) {
 }
 @Composable
 fun Avatar(contact: Contact) {
-    var img = contact.imageRes
+    val img = contact.imageRes
     Box {
         Image(
             modifier = Modifier
@@ -131,7 +133,7 @@ fun AdressPrinter(adress: String?, text: String?) {
 }
 @Composable
 fun NumberPhone(contact: Contact) {
-    var number = "---"
+    var number = stringResource(R.string.no_number)
     if (contact.phone.isNotEmpty()) {
         number = contact.phone
     }
